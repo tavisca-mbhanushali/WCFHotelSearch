@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HotelResponseService.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HotelResponseService.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Response2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListofHotels2" nillable="true" type="tns:ArrayOfSecondResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Response2" nillable="true" type="tns:Response2" />
+  <xs:complexType name="ArrayOfSecondResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecondResponse" nillable="true" type="tns:SecondResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecondResponse" nillable="true" type="tns:ArrayOfSecondResponse" />
+  <xs:complexType name="SecondResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumOfRoom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomTypes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bestValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotelId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="minAverPrice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondResponse" nillable="true" type="tns:SecondResponse" />
+</xs:schema>
